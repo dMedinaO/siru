@@ -8,6 +8,7 @@ $(window).on('load', function() {
 	var listar = function(){
 
 		var table = $("#reportes").DataTable({
+			"order": [[ 2, "desc" ]],
 			"responsive": true,
 			"dom": '<"newtoolbar">frtip',
 			"destroy":true,
@@ -24,8 +25,7 @@ $(window).on('load', function() {
 				{"data":"nameSector"},
 				{"data":"nombreSubSector"},
 				{"data":"priority"},
-				{"data":"message"},
-				{"defaultContent": "<button type='button' class='asignar btn btn-success' data-toggle='modal' data-target='#myModalAsignar'><i class='fa fa-table'></i></button> <button type='button' class='editar btn btn-primary' data-toggle='modal' data-target='#myModalEditar'><i class='fa fa-pencil-square-o'></i></button>	"}
+				{"defaultContent": "<button type='button' class='detalle btn btn-default'><i class='fa fa-user'></i></button> <button type='button' class='asignar btn btn-success' data-toggle='modal' data-target='#myModalAsignar'><i class='fa fa-table'></i></button> <button type='button' class='editar btn btn-primary' data-toggle='modal' data-target='#myModalEditar'><i class='fa fa-pencil-square-o'></i></button>	"}
 			],
 
 			"language": idioma_espanol
@@ -34,6 +34,7 @@ $(window).on('load', function() {
 		$('#demo-custom-toolbar2').appendTo($("div.newtoolbar"));
 		obtener_data_editar("#reportes tbody", table);
 		obtener_data_Asignar("#reportes tbody", table);
+		obtener_data_Detalle("#reportes tbody", table);
 
 	}
 
@@ -42,6 +43,14 @@ $(window).on('load', function() {
 			var data = table.row( $(this).parents("tr") ).data();
 			var idreportUser = $("#frmAsignar #idreportUser").val( data.idreportUser );
 
+		});
+	}
+
+	var obtener_data_Detalle = function(tbody, table){
+		$(tbody).on("click", "button.detalle", function(){
+			var data = table.row( $(this).parents("tr") ).data();
+			var idreportUser = data.idreportUser;
+			location.href="reportSelectedView.php?data="+data.dateReport;
 		});
 	}
 

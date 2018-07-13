@@ -518,9 +518,11 @@
 
     <!-- section modal para los distintos tipos de funcionalidades -->
     <!-- modal para editar un reporte -->
-    <div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
+		<div >
+
 			<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
 				<input type="hidden" id="idreportUser" name="idreportUser" value="">
+    <div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
 
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -558,6 +560,7 @@
 
 					</div>
 				</div>
+			</div>
 			</form>
 		</div>
 

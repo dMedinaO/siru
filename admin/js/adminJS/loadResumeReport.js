@@ -2,6 +2,7 @@ $(window).on('load', function() {
 
 	cargarInfo();
 	cargarInfoReporte();
+	cargarInfoReportePicture();
 
 });
 
@@ -20,6 +21,31 @@ var cargarInfo = function(){
       $(".dniData").html( response.dni );
 			$(".correoData").html( response.emailUser );
 
+		});
+}
+
+var cargarInfoReportePicture = function(){
+
+  var data = getQuerystring('data');
+	$.ajax({
+			method:"POST",
+			url: "../php/TreeView/getResumeReportDataFigure.php?data="+data,
+
+		}).done( function( info ){
+      var response = JSON.parse(info);
+			var usuario = response.user;
+			var name = response.imageName;
+
+			if (name != "1q2w3e"){
+				var image = new Image();
+
+	    	var src = "../resource/fileReport/"+usuario+"/"+name;
+	    	image.src = src;
+
+	    	$('#imageReport').append(image);
+			}else{
+				$('#imageReport').html("Este reporte no presenta Imagen asociada");
+			}
 		});
 }
 

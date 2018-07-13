@@ -217,7 +217,7 @@
                     <!--Page Title-->
                     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                     <div id="page-title">
-                        <h1 class="page-header text-overflow">Reportes Categorizados</h1>
+                        <h1 class="page-header text-overflow">Reportes Asignados</h1>
 
                     </div>
                     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -237,7 +237,7 @@
       					            <!---------------------------------->
       					            <div class="panel">
       					                 <div class="panel-heading">
-      					                     <h3 class="panel-title">Reportes Categorizados por Categoría</h3>
+      					                     <h3 class="panel-title">Reportes Asignados por Categoría</h3>
       					                 </div>
       					                 <div class="panel-body">
       					                    <div id="reporyByCategory"></div>
@@ -278,7 +278,7 @@
 					            <!---------------------------------->
 					            <div class="panel">
 					                 <div class="panel-heading">
-					                     <h3 class="panel-title">Reportes Categorizados</h3>
+					                     <h3 class="panel-title">Reportes Asignados</h3>
 					                 </div>
 					                 <div class="panel-body">
 					                    <div id="demo-jstree-json"></div>

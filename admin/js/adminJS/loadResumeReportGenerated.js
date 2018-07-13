@@ -1,6 +1,7 @@
 $(window).on('load', function() {
 
 	cargarInfoReporte();
+	cargarInfoReportePicture();
 
 });
 
@@ -19,6 +20,34 @@ var cargarInfoReporte = function(){
       $(".stageData").html( response.stageReport );
 			$(".categoryData").html( response.nameCategory );
 			$(".detalleReporte").html( response.message );
+
+		});
+}
+
+var cargarInfoReportePicture = function(){
+
+  var data = getQuerystring('idReporte');
+	$.ajax({
+			method:"POST",
+			url: "../../php/TreeView/getResumeReportDataByReportFigure.php?data="+data,
+
+		}).done( function( info ){
+      var response = JSON.parse(info);
+			var usuario = response.user;
+			var name = response.imageName;
+
+			if (name == "1q2w3e"){
+
+				$('#imageReport').html("-");
+			}
+			else{
+				var image = new Image();
+
+	    	var src = "../../resource/fileReport/"+usuario+"/"+name;
+	    	image.src = src;
+
+	    	$('#imageReport').append(image);
+			}
 
 		});
 }

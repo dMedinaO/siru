@@ -247,7 +247,6 @@
                           <th class="min-tablet">Sector</th>
                           <th class="min-tablet">SubSector</th>
                           <th class="min-tablet">Prioridad</th>
-                          <th class="min-tablet">Detalle</th>
                           <th class="min-tablet">Opciones</th>
                         </tr>
                 </thead>
@@ -456,9 +455,10 @@
 
    <!-- modal section -->
    <!-- modal para generar la asignacion de elementos -->
+	 <div>
+		 <form id="frmAsignar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+			 <input type="hidden" id="idreportUser" name="idreportUser" value="">
     <div class="modal fade" id="myModalAsignar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
-			<form id="frmAsignar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
-				<input type="hidden" id="idreportUser" name="idreportUser" value="">
 
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -492,13 +492,17 @@
 
 					</div>
 				</div>
+			</div>
 			</form>
 		</div>
 
 		<!-- modal para editar un nuevo elemento -->
-		<div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
+		<div>
+
 			<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
 				<input type="hidden" id="idreportUser" name="idreportUser" value="">
+
+		<div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
 
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -544,6 +548,7 @@
 
 					</div>
 				</div>
+			</div>
 			</form>
 		</div>
 </body>

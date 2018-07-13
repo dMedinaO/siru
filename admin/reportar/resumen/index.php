@@ -304,12 +304,6 @@
 
 		                                <div class="panel-body">
 		    					                <table class="table table-hover table-vcenter">
-		    					                    <thead>
-		    					                        <tr>
-		    					                            <th class="min-width">Atributo</th>
-		    					                            <th class="text-center">Valor</th>
-		    					                        </tr>
-		    					                    </thead>
 		    					                    <tbody>
 		    					                        <tr>
 		                                          <td>
@@ -360,7 +354,14 @@
 		    					                                <br>
 		    					                            </td>
 		    					                        </tr>
-
+																					<tr>
+		                                          <td>
+		                                            <span class="text-main text-semibold">Imagen</span>
+		                                          </td>
+		    					                            <td>
+		    					                                <div id="imageReport"></div>
+		    					                            </td>
+		    					                        </tr>
 		    					                    </tbody>
 		    					                </table>
 		    					            </div>
@@ -368,8 +369,7 @@
 		                            </div>
 		                        </div>
 		                        <!---------------------------------->
-		                  </div>
-
+		                  </div>											
                   </div>
               </div>
               <!--===================================================-->

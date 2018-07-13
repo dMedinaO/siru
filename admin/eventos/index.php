@@ -241,7 +241,7 @@
                           <th class="min-tablet">Categoria</th>
                           <th class="min-tablet">Creado</th>
                           <th class="min-tablet">Modificado</th>
-                          <th class="min-tablet">Eliminar</th>
+                          <th class="min-tablet">Opciones</th>
                         </tr>
                 </thead>
             </table>
@@ -544,9 +544,11 @@
 		</div>
 
     <!-- modal para editar un nuevo elemento -->
-		<div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
+		<div>
 			<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
 				<input type="hidden" id="ideventsReport" name="ideventsReport" value="">
+
+		<div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
 
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -611,6 +613,7 @@
 
 					</div>
 				</div>
+			</div>
 			</form>
 		</div>
 </body>

@@ -1,9 +1,16 @@
 $(function () {
-	var processed_json = new Array();
+
 	$.getJSON('php/statisticsData/loadDataReportesByDateByCategory.php', function(data) {
 
+		var responseInfo = data.valuesData;
 
-
+		for (i = 0; i < responseInfo.length; i++){
+			for (j=0; j<responseInfo[i].data.length; j++){
+				var fechaInfo = responseInfo[i].data[j][0].split("-");
+				var fechaData = Date.UTC(fechaInfo[0], fechaInfo[1]-1, fechaInfo[2]);
+				responseInfo[i].data[j][0] = fechaData;
+			}
+		}
 		// draw chart
         $('#historyReportCategory').highcharts({
 
@@ -29,7 +36,7 @@ $(function () {
 			    },
 			    yAxis: {
 			        title: {
-			            text: 'Snow depth (m)'
+			            text: 'Reportes Cantidad'
 			        },
 			        min: 0
 			    },
@@ -45,7 +52,7 @@ $(function () {
 			            }
 			        }
 			    },
-		    series: data.valuesData
+		    series: responseInfo
 		});
 	});
 })

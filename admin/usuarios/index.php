@@ -447,7 +447,7 @@
 
    <!-- modal section -->
    <!-- modal para agregar-->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="myModal" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -458,63 +458,66 @@
 
 						<form id="frmAgregar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
 						  <div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre <span class="required">*</span>
-							</label>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre <span class="required">*</span>
+								</label>
 
-							<div class="col-md-9 col-sm-9 col-xs-12">
-							  <input type="text" id="name" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre de usuario">
-							</div>
+								<div class="col-md-9 col-sm-9 col-xs-12">
+							  	<input type="text" id="name" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre de usuario">
+								</div>
 						  </div>
 
 						  <div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="last_name">Apellido <span class="required">*</span>
-							</label>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="last_name">Apellido <span class="required">*</span>
+								</label>
 
-							<div class="col-md-9 col-sm-9 col-xs-12">
-							  <input type="text" id="last_name" required="required" class="form-control col-md-7 col-xs-12" placeholder="Apellido Usuario">
-							</div>
+								<div class="col-md-9 col-sm-9 col-xs-12">
+							  	<input type="text" id="last_name" required="required" class="form-control col-md-7 col-xs-12" placeholder="Apellido Usuario">
+								</div>
 						  </div>
 
 						  <div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="dni">DNI/RUT <span class="required">*</span>
-							</label>
-							<div class="col-md-9 col-sm-9 col-xs-12">
-							  <input type="text" id="dni" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese RUT o DNI">
-							</div>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="dni">DNI/RUT <span class="required">*</span>
+								</label>
+								<div class="col-md-9 col-sm-9 col-xs-12">
+							  	<input type="text" id="dni" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese RUT o DNI">
+								</div>
 						  </div>
 
               <div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
-							</label>
-							<div class="col-md-9 col-sm-9 col-xs-12">
-							  <input type="text" id="email" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese su email">
-							</div>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
+								</label>
+								<div class="col-md-9 col-sm-9 col-xs-12">
+							  	<input type="text" id="email" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese su email">
+								</div>
 						  </div>
 
 						  <div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="rolUser">Rol Usuario<span class="required">*</span>
-							</label>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="rolUser">Rol Usuario<span class="required">*</span>
+								</label>
 
-							<div class="col-md-9 col-sm-9 col-xs-12">
-							  <select id="rolUser" class="form-control">
-								<option value="1">ADMINISTRADOR</option>
-								<option value="2">ENCARGADO</option>
-								<option value="3">REPORTER</option>
-							  </select>
-							</div>
+								<div class="col-md-9 col-sm-9 col-xs-12">
+								  <select id="rolUser" class="form-control">
+									<option value="1">ADMINISTRADOR</option>
+									<option value="2">ENCARGADO</option>
+									<option value="3">REPORTER</option>
+								  </select>
+								</div>
 						  </div>
 
 						  <div class="ln_solid"></div>
-						  <div class="form-group">
-							<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-								<button type="reset" class="btn btn-primary">Resetear</button>
-								<button type="button" id="agregar-usuario" class="btn btn-success" data-dismiss="modal">Aceptar</button>
-								<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-							</div>
-						  </div>
+
 
 						</div>
 
+						<div class="modal-footer">
+							<div class="form-group">
+								<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+									<button type="reset" class="btn btn-primary">Resetear</button>
+									<button type="button" id="agregar-usuario" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+								</div>
+						  </div>
+						</div>
 					</div>
 				</div>
 			</form>
@@ -547,10 +550,10 @@
 </div>
 
 <!-- modal para editar un nuevo elemento -->
+<div>
+	<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+		<input type="hidden" id="iduser" name="iduser" value="">
 		<div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
-			<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
-				<input type="hidden" id="iduser" name="iduser" value="">
-
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -620,8 +623,8 @@
 
 					</div>
 				</div>
-			</form>
 		</div>
-
+		</form>
+</div>
 </body>
 </html>

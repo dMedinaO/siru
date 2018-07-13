@@ -11,6 +11,7 @@ $(window).on('load', function() {
 
 		var table = $("#eventos").DataTable({
 			"responsive": true,
+			"order": [[ 4, "desc" ]],
 			"dom": '<"newtoolbar">frtip',
 			"destroy":true,
 			"ajax":{
@@ -25,7 +26,7 @@ $(window).on('load', function() {
 				{"data":"nameCategory"},
 				{"data":"createdEvent"},
 				{"data":"modifiedEvent"},
-				{"defaultContent": "<button type='button' class='editar btn btn-primary' data-toggle='modal' data-target='#myModalEditar'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
+				{"defaultContent": "<button type='button' class='detalle btn btn-success'><i class='fa fa-list'></i></button> <button type='button' class='editar btn btn-primary' data-toggle='modal' data-target='#myModalEditar'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
 			],
 
 			"language": idioma_espanol
@@ -39,9 +40,9 @@ $(window).on('load', function() {
 	}
 
 	var viewDetail = function(tbody, table){
-		$(tbody).on("click", "button.verDetalle", function(){
+		$(tbody).on("click", "button.detalle", function(){
 			var data = table.row( $(this).parents("tr") ).data();
-			location.href="reportInEvents.html?data="+data.ideventsReport;
+			location.href="reportesDetalle.php?data="+data.ideventsReport;
 		});
 	}
 

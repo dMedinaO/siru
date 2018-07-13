@@ -479,9 +479,6 @@
 
     <!-- modal para editar un nuevo elemento -->
 		<div class="modal fade" id="myModalEditar" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true">
-			<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
-				<input type="hidden" id="idcategoryReport" name="idcategoryReport" value="">
-
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -490,7 +487,25 @@
 						</div>
 						<div class="modal-body">
 
+							<form id="frmAgregarFile" action="../php/categorias/uploadFile.php" class="dropzone" >
+					            <div class="dz-default dz-message">
+					                <div class="dz-icon">
+					                    <i class="demo-pli-upload-to-cloud icon-5x"></i>
+					                </div>
+					                <div>
+					                    <span class="dz-text">Arrastra la imagen aquí</span>
+					                    <p class="text-sm text-muted">Haz click para hacerlo manual</p>
+					                </div>
+					            </div>
+					            <div class="fallback">
+					                <input name="file" type="file" multiple>
+					            </div>
+					        </form>
 
+              <br>
+              <br>
+							<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+								<input type="hidden" id="idcategoryReport" name="idcategoryReport" value="">
 						 <div class="form-group">
 							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre <span class="required">*</span>
 							</label>

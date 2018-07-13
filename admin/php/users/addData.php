@@ -26,7 +26,7 @@
 
 			//preguntamos por el rol de usuario...
 
-			$path = "/var/www/html/UnSafe/admin/resource/fileReport/".$idUser;
+			$path = "/var/www/html/siru/admin/resource/fileReport/".$idUser;
 
 			if (!file_exists($path)) {
 			    mkdir($path, 0777, true);

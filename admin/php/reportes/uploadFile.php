@@ -1,11 +1,13 @@
 <?php
 
+	session_start();
+	$idUSer = $_SESSION['userName'];
 	$archivo = $_FILES['file'];
 
 	$templocation = $archivo["tmp_name"];
 	$name = $archivo["name"];
 
-	$pathMove = "../../resource/fileReport/1/$name";
+	$pathMove = "../../resource/fileReport/".$idUSer."/$name";
 
 
 	if(!$templocation){
@@ -18,8 +20,9 @@
 		echo "Error al guardar el archivo";
 	}
 
+	$pathData = "../../resource/fileReport/".$idUSer."/nameFileRecentUpload.txt";
 	//finalmente escribimos un archivo de texto con el nombre de la imagen...
-	$file = fopen("../../resource/fileReport/1/nameFileRecentUpload.txt", "w");
+	$file = fopen($pathData, "w");
 
 	fwrite($file, "$name");
 

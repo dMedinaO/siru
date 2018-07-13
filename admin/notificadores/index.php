@@ -526,10 +526,12 @@
 			</form>
 		</div>
 
+<div>
+	<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+		<input type="hidden" id="idnotificationEvent" name="idnotificationEvent" value="">
+
 		<!-- modal para editar un nuevo elemento -->
 		<div class="modal fade" id="myModalEditar" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true">
-			<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
-				<input type="hidden" id="idnotificationEvent" name="idnotificationEvent" value="">
 
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -579,8 +581,9 @@
               </div>
 					</div>
 				</div>
-			</form>
-		</div>
+			</div>
+		</form>
+	</div>
 
 </body>
 </html>
